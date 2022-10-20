@@ -1,0 +1,45 @@
+* {
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+td {
+    height: 65px;
+    width: 65px;
+    background-color: rgba(188, 96, 30, 0.573);
+}
+
+.alternate {
+background-color: rgb(244, 220, 184);
+}
+
+.white {
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.black {
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.winText {
+    color: white;
+}
+
+.victory {
+    color: Red;
+}
