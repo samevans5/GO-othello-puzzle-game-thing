@@ -9,11 +9,10 @@ let pieces = document.querySelectorAll("p");
 let selectedPiece = {
     pieceId: -1,
     indexOfBoardPiece: -1,
-    minusThreeSpace: false,
-    threeSpace: false,
-    minusOneSpace: false,
-    oneSpace: false
 }
+
+let moves = 0;
+let winCondition = false;
 
 let findPiece = function (pieceId) {
     let parsed = parseInt(pieceId);
@@ -25,9 +24,12 @@ function getSelectedPiece() {
     selectedPiece.indexOfBoardPiece = findPiece(selectedPiece.pieceId)
 }
 
+
 for (let i = 0; i < pieces.length; i++) {
     pieces[i].addEventListener("click", e => {
-        getSelectedPiece(pieces[i])
+        getSelectedPiece(pieces[i]);
+        moves++;
+        document.getElementById('counter').innerHTML = moves;
         if (document.getElementById(selectedPiece.pieceId).className === "white") {
             document.getElementById(selectedPiece.pieceId).classList.replace("white", "black");
         } else if (document.getElementById(selectedPiece.pieceId).className === "black") {
@@ -69,20 +71,24 @@ for (let i = 0; i < pieces.length; i++) {
                 document.getElementById(selectedPiece.pieceId + 3).classList.replace("black", "white")
             }
         }
+        
+        if (document.getElementById("0").classList == "black" &&
+            document.getElementById("1").classList == "black" &&
+            document.getElementById("2").classList == "black" &&
+            document.getElementById("3").classList == "black" &&
+            document.getElementById("4").classList == "black" &&
+            document.getElementById("5").classList == "black" &&
+            document.getElementById("6").classList == "black" &&
+            document.getElementById("7").classList == "black" &&
+            document.getElementById("8").classList == "black") {
+            winCondition = true;
+        }
+
+        if (winCondition === true) {
+            document.getElementById("win").classList.replace("winText", "victory")
+            document.getElementById("moveTracker").classList.add("winText")
+            document.getElementById('score').innerHTML = moves;
+        }
+        
     });
 }
-
-/*
-let winCondition = false
-for (className in pieces) {
-    if (className === "white") {
-        winCondition = false
-    } else {
-        winCondition = true
-    }
-}  
-
-if (winCondition === true) {
-    document.getElementById(win).classList.replace("winText", "victory")
-}
-*/
