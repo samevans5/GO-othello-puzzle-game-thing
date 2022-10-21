@@ -2,44 +2,72 @@
     margin: auto;
 }
 
-main {
+h1 {
+    color: antiquewhite;
+    padding: auto;
+    text-shadow: 2px 2px rgb(72, 72, 204);
+    font: 40px arial, verdana, sans-serif;
+    margin-bottom: -10px;
+}
+
+d {
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+body {
+    background-color: rgb(28, 16, 99);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     height: 100vh;
 }
 
+.floatContainer {
+    display: flex;
+} 
+
+.floatChild {
+    float: left;
+    margin-left: 20px;
+}
+
 td {
-    height: 65px;
-    width: 65px;
+    height: 110px;
+    width: 110px;
     background-color: rgba(188, 96, 30, 0.573);
+    border: 20px outset rgba(188, 96, 30, 0.404);
 }
 
 .alternate {
 background-color: rgb(244, 220, 184);
+border-color: rgba(241, 207, 156, 0.945);
+}
+
+.white, .black {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 3px solid darkgray;
+    outline: 4px outset rgb(30, 30, 30, 0.2);
 }
 
 .white {
-    width: 20px;
-    height: 20px;
-    padding: 12px;
     background-color: white;
-    border-radius: 50px;
 }
 
 .black {
-    width: 20px;
-    height: 20px;
-    padding: 12px;
     background-color: black;
-    border-radius: 50px;
+}
+
+.white:hover, .black:hover{
+    outline: 4px solid rgb(202, 149, 79);
 }
 
 .winText {
-    color: white;
+    color: rgb(28, 16, 99);
 }
 
 .victory {
-    color: Red;
-}
+    color: antiquewhite;
+} 
