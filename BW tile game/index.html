@@ -9,28 +9,35 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <main>
-        <h1> Turn all the counters black </h1>
-        <table>
-            <tr>
-                <td class="alternate"><p class="white" id="0"></p></td>
-                <td><p class="white" id="1"></p></td>
-                <td class="alternate"><p class="white" id="2"></p></td>
-            </tr>
-            <tr>
-                <td><p class="white" id="3"></p></td>
-                <td class="alternate"><p class="black" id="4"></p></td>
-                <td><p class="white" id="5"></p></td>
-            </tr>
-            <tr>
-                <td class="alternate"><p class="white" id="6"></p></td>
-                <td><p class="white" id="7"></p></td>
-                <td class="alternate"><p class="white" id="8"></p></td>
-            </tr>
-    </table>
-    <div>
-        <p class="winText" id="win"> You won! </p>
-    </div>
+    <h1> Turn all the counters black </h1>
+    <main class="floatContainer">
+        <div class="floatChild">
+            <table cellspacing="0">
+                <tr>
+                    <td class="alternate"><p class="white" id="0"></p></td>
+                    <td><p class="white" id="1"></p></td>
+                    <td class="alternate"><p class="white" id="2"></p></td>
+                </tr>
+                <tr>
+                    <td><p class="white" id="3"></p></td>
+                    <td class="alternate"><p class="black" id="4"></p></td>
+                    <td><p class="white" id="5"></p></td>
+                </tr>
+                <tr>
+                    <td class="alternate"><p class="white" id="6"></p></td>
+                    <td><p class="white" id="7"></p></td>
+                    <td class="alternate"><p class="white" id="8"></p></td>
+                </tr>
+            </table> 
+        </div>
+        <div class="floatChild">
+            <div>
+                <d class="moveCounter" id="moveTracker">Move Counter: <var id="counter">0</var> </d>
+            </div>
+            <div>
+                <d class="winText" id="win"> You Won! It took you <var id="score"></var> moves. </d>
+            </div>
+        </div>
     </main>
 </body>
 </html>
